@@ -1,0 +1,15 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+
+using namespace std;
+
+void func(int& a) {
+	if (a == 0) cout << "Error";
+	else cout << -a;
+}
+int main() {
+	int x;
+	cin >> x;
+	func(x);
+}
