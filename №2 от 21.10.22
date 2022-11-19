@@ -1,0 +1,24 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+
+using namespace std;
+
+const double e = pow(10, -9);
+const double g = 6.672 * pow(10, -11);
+
+int main() {
+	int a, b, c, r1, r2, r3;
+	double f1, f2, f3;
+	cin >> a >> b >> c >> r1 >> r2 >> r3;
+	f1 = (g * a * b) / (r1 * r1);
+	f2 = (g * b * c) / (r2 * r2);
+	f3 = (g * a * c) / (r3 * r3);
+	if (f1 + e < f2 && f2 + e < f3) {
+		cout << "f2 = " << f2 << "f3 = " << f3;
+	}
+	if (f2 + e < f1 && f2 + e < f3) {
+		cout << "f1 = " << f1 << "f3 = " << f3;
+	}
+	else cout << "f1 = " << f1 << "f2 = " << f2;
+}
