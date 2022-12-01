@@ -9,14 +9,14 @@ int main() {
 	расчет суммы с n = 2
 	следовательно все первоначальные значения расчитанны для n = 2*/
 	double sum = 0, e;
-	int z = 24, n = 2, x; // z = (2n)!
+	unsigned long long z = 24, n = 2, x; // z = (2n)!
 	int c = 4; //счетчик для расчета нового факториала
 	cout << "Vvedite x: ";
 	cin >> x;
 	cout << "e = ";
 	cin >> e;
 	double slagaemoe = n * (n - 1) * (pow(x, 2 * n) / z);
-	cout << "1 " << slagaemoe << endl;
+	cout << "1 0" << endl;
 	while (fabs(slagaemoe) >= e) {
 		cout << fixed << setprecision(0) << n << ' ';
 		sum += slagaemoe;
