@@ -1,0 +1,30 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main() {
+	/*Для n = 1 slagaemoe будет равно 0, что не
+	позволит нам войти в цикл поэтому начинаем
+	расчет суммы с n = 2
+	следовательно все первоначальные значения расчитанны для n = 2*/
+	double sum = 0, e;
+	int z = 24, n = 2, x; // z = (2n)!
+	int c = 4; //счетчик для расчета нового факториала
+	cout << "Vvedite x: ";
+	cin >> x;
+	cout << "e = ";
+	cin >> e;
+	double slagaemoe = n * (n - 1) * (pow(x, 2 * n) / z);
+	cout << "1 " << slagaemoe << endl;
+	while (fabs(slagaemoe) >= e) {
+		cout << fixed << setprecision(0) << n << ' ';
+		sum += slagaemoe;
+		cout << fixed << setprecision(10) << sum << endl;
+		n++;
+		z = z * (c + 1) * (c + 2); 
+		c += 2;
+		slagaemoe = n * (n - 1) * (pow(x, 2 * n) / z);
+
+	}
+}
