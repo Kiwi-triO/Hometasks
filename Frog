@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int f(int a, int x) {
+    if (a > x)
+        return 0;
+    if (a == x)
+        return 1;
+    if (a < x)
+        return f(a + 3, x) + f(a + 5, x);
+}
+
+int main() {
+
+    int x; cin >> x;
+    cout << f(0, x) << endl;
+
+}
