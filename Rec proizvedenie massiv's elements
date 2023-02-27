@@ -16,5 +16,7 @@ int main() {
 	}
 	
 	cout << f(ar, n, 1, 0);
+	
+	delete[] ar;
 
 }
