@@ -1,0 +1,20 @@
+#include<iostream>
+
+using namespace std;
+
+int f(int *ar, int n, int sum, int k) {
+	if (k == n) return sum;
+	sum = sum * ar[k];
+	return f(ar, n, sum, k + 1);
+}
+
+int main() {
+	int n; cin >> n;
+	int* ar = new int[n];
+	for (int i = 0; i < n; i++) {
+		cin >> ar[i];
+	}
+	
+	cout << f(ar, n, 1, 0);
+
+}
